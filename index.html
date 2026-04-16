@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist R | Official Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --accent-color: #000000;
+            --text-main: #1a1a1a;
+            --text-sub: #666666;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Noto Sans JP', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .serif {
+            font-family: 'Shippori Mincho', serif;
+        }
+        .symbol-card {
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .symbol-card:hover {
+            border-color: #000000;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+        .line-art {
+            position: relative;
+        }
+        .line-art::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 1px;
+            background: #000;
+        }
+        .nav-link {
+            position: relative;
+            padding-bottom: 2px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .btn-outline {
+            border: 1px solid #000;
+            padding: 10px 24px;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="selection:bg-black selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-8 py-8 flex justify-between items-center bg-white/80 backdrop-blur-md">
+        <div class="text-2xl font-light tracking-[0.4em] serif">R</div>
+        <div class="hidden md:flex space-x-12 text-[11px] uppercase tracking-[0.3em] font-medium">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#works" class="nav-link">Gallery</a>
+            <a href="#database" class="nav-link">AI Database</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden bg-[#fafafa]">
+        <div class="z-10">
+            <div class="mb-12">
+                <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%B5%84%E7%B9%94%E7%95%AA%E5%8F%B7_003.png" 
+                     alt="Artist R" class="w-20 h-20 mx-auto rounded-full grayscale opacity-80 border border-black/5 p-1">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold serif mb-12 tracking-tight leading-tight">
+                同一アート作家 R<br><span class="text-gray-400 font-light">Official Portfolio</span>
+            </h1>
+            <div class="max-w-2xl mx-auto py-10 border-t border-black/5">
+                <p class="text-xl md:text-3xl serif italic text-black leading-relaxed">
+                    「一秒一秒大喜利大会だと思って生きろ」
+                </p>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-10 hidden md:block">
+            <p class="text-[10px] rotate-90 origin-left tracking-[0.5em] text-gray-400 uppercase">Scroll to View</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-8 max-w-4xl mx-auto">
+        <div class="space-y-12">
+            <h2 class="text-xs tracking-[0.5em] text-gray-400 uppercase font-bold line-art inline-block">Introduction</h2>
+            <div class="grid md:grid-cols-1 gap-8">
+                <p class="text-xl md:text-2xl serif leading-loose text-gray-800">
+                    記号制作、アート作品の販売、そしてAIデータベースの構築。
+                </p>
+                <p class="text-sm md:text-base leading-loose text-gray-500 max-w-2xl">
+                    私は「同一アート作家 R」として、形のない思考を「記号」へと結晶化させる活動を行っています。
+                    制作したアート作品の販売のほか、AIによる未知の言語や定義を収集するデータベース構築にも携わっています。
+                    一瞬一瞬を大喜利のように捉え、世界に新しい「解釈」を提示し続けることが私の使命です。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="py-32 px-8 bg-[#f5f5f5]">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-20 flex justify-between items-end">
+                <div>
+                    <h2 class="text-xs tracking-[0.5em] text-gray-400 uppercase font-bold line-art inline-block mb-4">Art Gallery</h2>
+                    <h3 class="text-3xl font-bold serif mt-6">作品販売</h3>
+                </div>
+                <a href="#" class="btn-outline hidden md:block">VIEW ALL PIECES</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                
+                <!-- Work 1 -->
+                <div class="symbol-card p-12 rounded-sm group bg-white">
+                    <div class="aspect-square flex items-center justify-center mb-12 bg-[#fafafa] relative overflow-hidden">
+                        <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%96%91%E5%95%8F%E5%9B%B3%E9%91%91_019.png" 
+                             alt="ゼット サンド" class="w-1/2 h-1/2 object-contain grayscale group-hover:grayscale-0 transition duration-1000">
+                        <div class="absolute bottom-4 right-4 text-[10px] font-bold tracking-tighter opacity-0 group-hover:opacity-100 transition">AVAILABLE FOR SALE</div>
+                    </div>
+                    <div class="space-y-6">
+                        <h4 class="text-2xl font-bold serif">ゼット サンド</h4>
+                        <p class="text-sm text-gray-500 leading-loose">
+                            思考のループ、エンドレスな会議の象徴。キャンバスプリントおよびデジタルオーナーシップを販売中。
+                        </p>
+                        <div class="pt-6 border-t border-gray-100 flex justify-between items-center">
+                            <span class="text-lg font-light serif">¥ ---,---</span>
+                            <button class="text-[10px] font-bold tracking-widest uppercase border-b border-black">Purchase Inquiry</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work 2 -->
+                <div class="symbol-card p-12 rounded-sm group bg-white">
+                    <div class="aspect-square flex items-center justify-center mb-12 bg-[#fafafa] relative overflow-hidden">
+                        <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%96%91%E5%95%8F%E5%9B%B3%E9%91%91_017.png" 
+                             alt="PCの究極権利" class="w-1/2 h-1/2 object-contain grayscale group-hover:grayscale-0 transition duration-1000">
+                    </div>
+                    <div class="space-y-6">
+                        <h4 class="text-2xl font-bold serif">PCの究極権利</h4>
+                        <p class="text-sm text-gray-500 leading-loose">
+                            デジタル・プライバシーと権限の象徴。抽象的なアクセス権を物理的なアートとして定義した一点物。
+                        </p>
+                        <div class="pt-6 border-t border-gray-100 flex justify-between items-center text-[10px] tracking-widest uppercase text-gray-400">
+                            <span>Exhibited Item</span>
+                            <button class="text-black border-b border-black">Contact for Details</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Database Section -->
+    <section id="database" class="py-32 px-8 bg-white">
+        <div class="max-w-4xl mx-auto space-y-16">
+            <div class="text-center">
+                <h2 class="text-xs tracking-[0.5em] text-gray-400 uppercase font-bold mb-6">AI Database & Projects</h2>
+                <h3 class="text-4xl font-bold serif">デジタルアーカイブ</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Project 1: Fictional Dictionary -->
+                <div class="p-10 bg-[#0a0a0a] text-white space-y-6">
+                    <div class="flex justify-between items-start">
+                        <h4 class="text-xl font-bold serif">AI Fictional Dictionary</h4>
+                        <span class="text-[9px] border border-white/30 px-2 py-1">LIVE</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        私が主導する、AIによる架空の言語・定義・記号を収集した公開データベース。
+                    </p>
+                    <a href="https://rits1019c1.github.io/ai-Fictional-dictionary/" target="_blank" class="inline-block text-[10px] font-bold tracking-[0.2em] border-b border-white pt-4">ENTER ARCHIVE</a>
+                </div>
+
+                <!-- Project 2: Symbol Encyclopedia -->
+                <div class="p-10 border border-gray-100 bg-[#fafafa] space-y-6">
+                    <div class="flex justify-between items-start text-black">
+                        <h4 class="text-xl font-bold serif">Symbol Encyclopedia</h4>
+                        <span class="text-[9px] border border-black/10 px-2 py-1 text-gray-400">PARTNER</span>
+                    </div>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        T.S.氏が管理する、私の記号作品の全記録。疑問図録としてのアーカイブ。
+                    </p>
+                    <a href="https://shun240523-stack.github.io/Symbolencyclopedia/" target="_blank" class="inline-block text-[10px] font-bold tracking-[0.2em] border-b border-black pt-4">VIEW REPOSITORY</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-24 px-8 text-center bg-[#fafafa] border-t border-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="serif text-3xl font-light mb-16 tracking-[0.2em]">Artist R</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-16 mb-20 text-[11px] tracking-[0.3em] uppercase">
+                <a href="#" class="hover:text-gray-400 transition">Works / Sales</a>
+                <a href="#" class="hover:text-gray-400 transition">Database Inquiry</a>
+                <a href="#" class="hover:text-black transition text-black font-bold">Contact Artist</a>
+            </div>
+            <p class="text-[10px] text-gray-400 tracking-[0.4em] uppercase">
+                &copy; Artist R Official. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
