@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist R | Official Website</title>
+    <meta name="description" content="同一アート作家 R の公式サイト。記号と実存の辺境に立つアートアーカイブ。" />
+    <meta property="og:title" content="Artist R | Official Website" />
+    <meta property="og:description" content="同一アート作家 R の公式サイト。記号と実存の辺境に立つアートアーカイブ。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ec2045.github.io/artr/" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&family=Shippori+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
     <!-- AOS Library for animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
@@ -17,6 +25,7 @@
             --text-main: #1a1a1a;
             --text-sub: #666666;
         }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
@@ -24,22 +33,27 @@
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
+
         .serif {
             font-family: 'Shippori Mincho', serif;
         }
+
         .symbol-card {
             background: #ffffff;
             border: 1px solid #eeeeee;
             transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .symbol-card:hover {
             border-color: #000000;
             transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
         }
+
         .line-art {
             position: relative;
         }
+
         .line-art::after {
             content: '';
             position: absolute;
@@ -49,10 +63,12 @@
             height: 1px;
             background: #000;
         }
+
         .nav-link {
             position: relative;
             padding-bottom: 2px;
         }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -63,9 +79,11 @@
             background-color: #000;
             transition: width 0.3s ease;
         }
+
         .nav-link:hover::after {
             width: 100%;
         }
+
         .archive-btn {
             background: #0f172a;
             color: #38bdf8;
@@ -78,11 +96,13 @@
             text-decoration: none;
             display: inline-block;
         }
+
         .archive-btn:hover {
             background: #1e293b;
             box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
             transform: scale(1.02);
         }
+
         .history-line {
             position: absolute;
             left: 50%;
@@ -92,6 +112,7 @@
             background: #eee;
             transform: translateX(-50%);
         }
+
         .form-container {
             width: 100%;
             max-width: 700px;
@@ -100,17 +121,23 @@
             border-radius: 12px;
             overflow: hidden;
             background: #fdfdfd;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
         }
+
         @media (max-width: 768px) {
-            .history-line { left: 20px; transform: none; }
+            .history-line {
+                left: 20px;
+                transform: none;
+            }
         }
     </style>
 </head>
+
 <body class="selection:bg-black selection:text-white">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-8 py-8 flex justify-between items-center bg-white/80 backdrop-blur-md border-b border-gray-50">
+    <nav
+        class="fixed w-full z-50 px-8 py-8 flex justify-between items-center bg-white/80 backdrop-blur-md border-b border-gray-50">
         <div class="text-2xl font-light tracking-[0.4em] serif">R</div>
         <div class="hidden md:flex space-x-12 text-[11px] uppercase tracking-[0.3em] font-medium text-gray-400">
             <a href="#about" class="nav-link hover:text-black">Concept</a>
@@ -122,13 +149,16 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden bg-white">
+    <header
+        class="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden bg-white">
         <div class="z-10" data-aos="fade-up" data-aos-duration="1500">
             <!-- メインアイコン：四角いフレーム -->
             <div class="mb-12">
-                <div class="w-24 h-24 mx-auto border border-black/10 p-2 bg-white flex items-center justify-center relative group">
-                    <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%B5%84%E7%B9%94%E7%95%AA%E5%8F%B7_003.png" 
-                         alt="Artist R" class="w-full h-full grayscale opacity-90 transition-all duration-700 group-hover:grayscale-0">
+                <div
+                    class="w-24 h-24 mx-auto border border-black/10 p-2 bg-white flex items-center justify-center relative group">
+                    <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%B5%84%E7%B9%94%E7%95%AA%E5%8F%B7_003.png"
+                        alt="Artist R"
+                        class="w-full h-full grayscale opacity-90 transition-all duration-700 group-hover:grayscale-0">
                     <div class="absolute -inset-1 border border-black/5 pointer-events-none"></div>
                 </div>
             </div>
@@ -139,11 +169,15 @@
                 <p class="text-xl md:text-2xl serif italic text-black leading-relaxed">
                     「一秒一秒大喜利大会だと思って生きろ」
                 </p>
-                <p class="mt-4 text-[10px] tracking-[0.2em] text-gray-400 uppercase">Every moment is a canvas for the unexpected.</p>
+                <p class="mt-4 text-[10px] tracking-[0.2em] text-gray-400 uppercase">Every moment is a canvas for the
+                    unexpected.</p>
             </div>
         </div>
         <div class="absolute bottom-10 animate-bounce text-gray-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+                </path>
+            </svg>
         </div>
     </header>
 
@@ -177,12 +211,13 @@
                     <div class="md:w-[45%] mb-8 md:mb-0 text-right pr-0 md:pr-12 hidden md:block">
                         <span class="text-4xl font-light text-gray-200 serif">01 / Origin</span>
                     </div>
-                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-black z-10 md:block hidden"></div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-black z-10 md:block hidden">
+                    </div>
                     <div class="md:w-[45%] pl-12 md:pl-12 bg-white p-8 border border-gray-100 symbol-card">
                         <div class="mb-4">
                             <div class="w-16 h-16 border border-black/5 p-2 bg-white flex items-center justify-center">
-                                <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%96%91%E5%95%8F%E5%9B%B3%E9%91%91_016.png" 
-                                     alt="ベタクラメーション" class="w-full h-full grayscale opacity-80">
+                                <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%96%91%E5%95%8F%E5%9B%B3%E9%91%91_016.png"
+                                    alt="ベタクラメーション" class="w-full h-full grayscale opacity-80">
                             </div>
                         </div>
                         <h4 class="text-xl font-bold serif mb-2">覚醒：ベタクラメーション</h4>
@@ -193,11 +228,13 @@
                 </div>
 
                 <!-- Point 2 -->
-                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between" data-aos="fade-left">
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between"
+                    data-aos="fade-left">
                     <div class="md:w-[45%] mb-8 md:mb-0 text-left pl-0 md:pl-12 hidden md:block">
                         <span class="text-4xl font-light text-gray-200 serif">02 / Resonance</span>
                     </div>
-                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-black z-10 md:block hidden"></div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-black z-10 md:block hidden">
+                    </div>
                     <div class="md:w-[45%] pr-12 md:pr-12 bg-white p-8 border border-gray-100 symbol-card">
                         <h4 class="text-xl font-bold serif mb-2">共鳴：T.S.氏との邂逅</h4>
                         <p class="text-xs text-gray-500 leading-relaxed">
@@ -211,15 +248,19 @@
                     <div class="md:w-[45%] mb-8 md:mb-0 text-right pr-0 md:pr-12 hidden md:block">
                         <span class="text-4xl font-light text-gray-200 serif">03 / Expansion</span>
                     </div>
-                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-black z-10 md:block hidden"></div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-black z-10 md:block hidden">
+                    </div>
                     <div class="md:w-[45%] pl-12 md:pl-12 bg-white p-8 border border-gray-100 symbol-card">
                         <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-12 h-12 border border-black/5 bg-white p-1.5 flex items-center justify-center">
-                                <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%96%91%E5%95%8F%E5%9B%B3%E9%91%91_019.png" 
-                                     alt="ゼット サンド" class="w-full h-full grayscale opacity-80">
+                            <div
+                                class="w-12 h-12 border border-black/5 bg-white p-1.5 flex items-center justify-center">
+                                <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%96%91%E5%95%8F%E5%9B%B3%E9%91%91_019.png"
+                                    alt="ゼット サンド" class="w-full h-full grayscale opacity-80">
                             </div>
-                            <div class="w-12 h-12 border border-black/5 bg-white p-1.5 flex items-center justify-center">
-                                <img src="https://rits1019c1.github.io/ai-Fictional-dictionary/unfidmatk.png" alt="AI Icon" class="w-full h-full object-contain grayscale opacity-80">
+                            <div
+                                class="w-12 h-12 border border-black/5 bg-white p-1.5 flex items-center justify-center">
+                                <img src="https://rits1019c1.github.io/ai-Fictional-dictionary/unfidmatk.png"
+                                    alt="AI Icon" class="w-full h-full object-contain grayscale opacity-80">
                             </div>
                         </div>
                         <h4 class="text-xl font-bold serif mb-2">越境：AIの深淵へ</h4>
@@ -236,17 +277,20 @@
     <section id="works" class="py-32 px-8 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="mb-20" data-aos="fade-up">
-                <h2 class="text-xs tracking-[0.5em] text-gray-400 uppercase font-bold line-art inline-block mb-4">Art Sales</h2>
+                <h2 class="text-xs tracking-[0.5em] text-gray-400 uppercase font-bold line-art inline-block mb-4">Art
+                    Sales</h2>
                 <h3 class="text-3xl font-bold serif mt-6">価値の所有</h3>
                 <p class="text-sm text-gray-400 mt-2 italic">Possessing the identity of a symbol.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <!-- Work: BetaClamation -->
                 <div class="symbol-card p-12 rounded-sm group bg-white" data-aos="zoom-in">
-                    <div class="aspect-square flex flex-col items-center justify-center mb-12 bg-white relative overflow-hidden border border-gray-50">
-                        <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%96%91%E5%95%8F%E5%9B%B3%E9%91%91_016.png" 
-                             alt="ベタクラメーション" class="w-1/2 h-1/2 object-contain grayscale group-hover:grayscale-0 transition duration-1000">
+                    <div
+                        class="aspect-square flex flex-col items-center justify-center mb-12 bg-white relative overflow-hidden border border-gray-50">
+                        <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%96%91%E5%95%8F%E5%9B%B3%E9%91%91_016.png"
+                            alt="ベタクラメーション"
+                            class="w-1/2 h-1/2 object-contain grayscale group-hover:grayscale-0 transition duration-1000">
                     </div>
                     <h4 class="text-2xl font-bold serif mb-4">ベタクラメーション</h4>
                     <p class="text-sm text-gray-500 leading-loose mb-8">
@@ -254,15 +298,18 @@
                     </p>
                     <div class="pt-6 border-t border-gray-100 flex justify-between items-center">
                         <span class="text-lg font-light serif">PRICE: INQUIRE</span>
-                        <a href="#contact" class="text-[10px] font-bold tracking-widest uppercase border-b border-black">Purchase</a>
+                        <a href="#contact"
+                            class="text-[10px] font-bold tracking-widest uppercase border-b border-black">Purchase</a>
                     </div>
                 </div>
 
                 <!-- Work: Z-Sand -->
                 <div class="symbol-card p-12 rounded-sm group bg-white" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="aspect-square flex flex-col items-center justify-center mb-12 bg-white relative overflow-hidden border border-gray-50">
-                        <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%96%91%E5%95%8F%E5%9B%B3%E9%91%91_019.png" 
-                             alt="ゼット サンド" class="w-1/2 h-1/2 object-contain grayscale group-hover:grayscale-0 transition duration-1000">
+                    <div
+                        class="aspect-square flex flex-col items-center justify-center mb-12 bg-white relative overflow-hidden border border-gray-50">
+                        <img src="https://shun240523-stack.github.io/Symbolencyclopedia/symbols/%E7%96%91%E5%95%8F%E5%9B%B3%E9%91%91_019.png"
+                            alt="ゼット サンド"
+                            class="w-1/2 h-1/2 object-contain grayscale group-hover:grayscale-0 transition duration-1000">
                     </div>
                     <h4 class="text-2xl font-bold serif mb-4">ゼット サンド</h4>
                     <p class="text-sm text-gray-500 leading-loose mb-8">
@@ -270,7 +317,8 @@
                     </p>
                     <div class="pt-6 border-t border-gray-100 flex justify-between items-center">
                         <span class="text-lg font-light serif">PRICE: INQUIRE</span>
-                        <a href="#contact" class="text-[10px] font-bold tracking-widest uppercase border-b border-black">Purchase</a>
+                        <a href="#contact"
+                            class="text-[10px] font-bold tracking-widest uppercase border-b border-black">Purchase</a>
                     </div>
                 </div>
             </div>
@@ -290,10 +338,12 @@
                         このアーカイブは、意味の向こう側への入り口である。
                     </p>
                     <div class="flex flex-col space-y-4">
-                        <a href="https://rits1019c1.github.io/ai-Fictional-dictionary/" target="_blank" class="archive-btn text-center">
+                        <a href="https://rits1019c1.github.io/ai-Fictional-dictionary/" target="_blank"
+                            class="archive-btn text-center">
                             ACCESS U-AI ARCHIVE
                         </a>
-                        <a href="https://shun240523-stack.github.io/Symbolencyclopedia/" target="_blank" class="text-[10px] text-center font-bold tracking-[0.2em] border border-white/10 py-3 hover:bg-white/5 transition">
+                        <a href="https://shun240523-stack.github.io/Symbolencyclopedia/" target="_blank"
+                            class="text-[10px] text-center font-bold tracking-[0.2em] border border-white/10 py-3 hover:bg-white/5 transition">
                             架空疑問展 by T.S.
                         </a>
                     </div>
@@ -304,10 +354,13 @@
                             <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
                             <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
-                            <span class="text-[9px] font-mono text-gray-500 tracking-tighter ml-4">GEN_LOG // UNKNOWN_SYMBOL_INTEL</span>
+                            <span class="text-[9px] font-mono text-gray-500 tracking-tighter ml-4">GEN_LOG //
+                                UNKNOWN_SYMBOL_INTEL</span>
                         </div>
-                        <div class="bg-black p-12 flex flex-col items-center justify-center border border-white/5 rounded-lg">
-                            <img src="https://rits1019c1.github.io/ai-Fictional-dictionary/unfidmatk.png" alt="Unfidmatk-AI" class="w-40 h-40 mb-6 object-contain">
+                        <div
+                            class="bg-black p-12 flex flex-col items-center justify-center border border-white/5 rounded-lg">
+                            <img src="https://rits1019c1.github.io/ai-Fictional-dictionary/unfidmatk.png"
+                                alt="Unfidmatk-AI" class="w-40 h-40 mb-6 object-contain">
                             <span class="text-blue-400 font-mono text-xs tracking-widest">Unfidmatk-AI 1.0</span>
                             <span class="text-[8px] text-gray-500 mt-2 uppercase">Status: Monitoring</span>
                         </div>
@@ -321,19 +374,16 @@
     <section id="contact" class="py-32 px-8 bg-white">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-xs tracking-[0.5em] text-gray-400 uppercase font-bold line-art inline-block mb-4">Contact</h2>
+                <h2 class="text-xs tracking-[0.5em] text-gray-400 uppercase font-bold line-art inline-block mb-4">
+                    Contact</h2>
                 <h3 class="text-3xl font-bold serif mt-6">対話の窓口</h3>
                 <p class="text-sm text-gray-500 mt-4">私の作品、あるいはAIが紡ぐ不確定な未来について語りましょう。</p>
             </div>
-            
+
             <div class="form-container" data-aos="fade-up" data-aos-delay="200">
-                <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSdQ9mh1VDcFqx6dS7NX1Tlc4i_6w8xpCq6Jvybk8DTq6be4Jg/viewform?embedded=true" 
-                    width="100%" 
-                    height="850" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0"
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdQ9mh1VDcFqx6dS7NX1Tlc4i_6w8xpCq6Jvybk8DTq6be4Jg/viewform?embedded=true"
+                    width="100%" height="850" frameborder="0" marginheight="0" marginwidth="0"
                     style="display: block;">読み込んでいます…</iframe>
             </div>
         </div>
@@ -360,4 +410,5 @@
     </script>
 
 </body>
+
 </html>
