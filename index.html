@@ -19,6 +19,12 @@
     <!-- AOS Library for animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+@font-face {
+  font-family: '2045alphabet';
+  src: url('https://ec2045.github.io/2045font/2045alphabet.otf') format('opentype');
+  font-display: swap;
+}
+
         :root {
             --bg-color: #ffffff;
             --accent-color: #000000;
@@ -29,13 +35,13 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'Noto Sans JP', sans-serif;
+            font-family: '2045alphabet','Noto Sans JP', sans-serif;
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
 
         .serif {
-            font-family: 'Shippori Mincho', serif;
+            font-family: '2045alphabet','Shippori Mincho', serif;
         }
 
         .symbol-card {
@@ -130,15 +136,9 @@
                 transform: none;
             }
         }
-        @font-face {
-  font-family: '2045alphabet';
-  src: url('https://ec2045.github.io/2045font/2045alphabet.otf') format('opentype');
-  font-display: swap;
-}
 
-body {
-  font-family: '2045alphabet', 'Noto Sans JP', sans-serif;
-}
+
+
     </style>
 </head>
 
